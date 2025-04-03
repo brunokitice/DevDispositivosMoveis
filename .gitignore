@@ -1,15 +1,56 @@
+# === Android & IntelliJ Defaults ===
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.gradle/
+build/
+.idea/
 local.properties
+.DS_Store
+/captures/
+/output.json
+.externalNativeBuild/
+.cxx/
+coverage/
+
+# === Android Studio Specifics ===
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/tasks.xml
+
+# === Logs and crash dumps ===
+*.log
+hs_err_pid*
+
+# === OS-specific files ===
+Thumbs.db
+Desktop.ini
+
+# === Editor/Backup files ===
+*.swp
+*.bak
+*~
+*.tmp
+
+# === Kotlin/Java build system ===
+/app/build/
+*.apk
+*.ap_
+
+# === Gradle Wrapper ===
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+
+# === Signing & Keystore files (se usar) ===
+*.jks
+*.keystore
+key.properties
+
+# === Node/React Native (caso use juntos) ===
+node_modules/
+npm-debug.log
+yarn-error.log
