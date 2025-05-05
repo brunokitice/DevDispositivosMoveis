@@ -7,10 +7,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.applicationddm.components.Tela1
+import com.example.applicationddm.components.Tela2
 import com.example.applicationddm.ui.theme.ApplicationDDMTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ApplicationDDMTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Navegacao(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -31,17 +32,18 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ApplicationDDMTheme {
-        Greeting("Android")
+fun Navegacao(modifier: Modifier) {
+    val navController: NavHostController = rememberNavController()
+    NavHost(
+        navController = navController,
+        startDestination = "tela1",
+        modifier = modifier // <- Aqui agora está usando o modifier corretamente
+    ) {
+        composable("tela1") {
+            Tela1(navController, modifier = Modifier)
+        }
+        composable("tela2") {
+            Tela2(navController, modifier = Modifier)
+        }
     }
 }
