@@ -76,13 +76,13 @@ git clone https://github.com/brunokitice/DevDispositivosMoveis.git
 
 ```
 applicationDDM/
-├── app/                      
-│   ├── arremessador.kt
-│   ├── temporizador.kt
-│   ├── formatadorTelefone.kt
-│   ├── tela1.kt
-│   ├── tela2.kt
-│   └── 3components.kt
+├── app/
+│   ├── 3components.kt                  
+│   ├── ArremessadorDeDados.kt
+│   ├── FormataTelefone.kt
+│   ├── Tela1.kt
+│   ├── Tela2.kt
+│   └── Temporizador.kt
 ├── gradle/                   
 ├── .gitignore
 ├── build.gradle.kts
