@@ -61,7 +61,7 @@ Um layout interativo com:
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seuusuario/seurepositorio.git
+git clone https://github.com/brunokitice/DevDispositivosMoveis.git
 ```
 
 2. Abra o projeto no **Android Studio**.
@@ -76,14 +76,14 @@ git clone https://github.com/seuusuario/seurepositorio.git
 
 ```
 applicationDDM/
-├── app/                      # Código-fonte do app
+├── app/                      
 │   ├── arremessador.kt
 │   ├── temporizador.kt
 │   ├── formatadorTelefone.kt
 │   ├── tela1.kt
 │   ├── tela2.kt
-│   └── componenteTexto.kt
-├── gradle/                   # Configurações do Gradle
+│   └── 3components.kt
+├── gradle/                   
 ├── .gitignore
 ├── build.gradle.kts
 ├── settings.gradle.kts
